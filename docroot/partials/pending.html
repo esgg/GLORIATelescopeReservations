@@ -1,0 +1,22 @@
+<div ng-controller="PendingReservationsListCtrl">
+	<h3>My Pending Reservations</h3>
+	<hr class="divider">
+	<div ng-show="!loading && pending.length > 0" id="table" align="center"
+		class="table table-hover" style="color: #08C"></div>
+	<div ng-show="loading">
+		<div align="center" class="span3 alert alert-info">Loading...</div>
+	</div>
+	<div ng-show="!loading && pending.length == 0">
+		<div align="center" class="span5 alert">
+			<i>You don't have any reservations at this moment</i>
+			</p>
+		</div>
+	</div>
+	<div ng-show="pending.length > 0 && !loading" id="pagination"
+		class="pagination-centered">
+		<ul class="aui-pagination-content">
+			<li><a href="#">Prev</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+</div>
